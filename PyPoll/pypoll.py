@@ -64,17 +64,3 @@ with open(poll_data,newline="") as csvfile:
     print("Cordin: ",candidate_4_percent,"% ","(", len(candidate_4),")")
     print("---------------------------------")
     print("Winner: ", max(Winner))
-
-
-    text_path = os.path.join("raw_data","Election_Data_1.txt")
-    with open(text_path, "w") as text_file:
-        text_file.write("Election Results")
-        text_file.write("---------------------------------")
-        text_file.write("Total Votes: ", len(voter_id))
-        text_file.write("---------------------------------")
-        text_file.write("Vestal: ", candidate_1_percent,"% ","(", len(candidate_1),")")
-        text_file.write("Torres: ",candidate_2_percent,"% ","(", len(candidate_2),")")
-        text_file.write("Seth: ",candidate_3_percent,"% ","(", len(candidate_3),")")
-        tex_file.write("Cordin: ",candidate_4_percent,"% ","(", len(candidate_4),")")
-        text_file.write("---------------------------------")
-        text_file.wriet("Winner: ", max(Winner))
