@@ -1,7 +1,7 @@
 import os
 import csv
 
-poll_data= os.path.join("raw_data","election_data_1.csv")
+poll_data= os.path.join("raw_data","election_data_2.csv")
 
 #def candidate_count(candidate_name, candidate, count=0):
     #if candidate in candidate_name:
@@ -33,16 +33,16 @@ with open(poll_data,newline="") as csvfile:
         candidate_name.append(row[2])
 
     for candidate in candidate_name:
-        if candidate == "Vestal":
+        if candidate == "Khan":
             candidate_1.append(candidate)
 
-        elif candidate == "Torres":
+        elif candidate == "Li":
             candidate_2.append(candidate)
 
-        elif candidate == "Seth":
+        elif candidate == "Correy":
             candidate_3.append(candidate)
 
-        elif candidate == "Cordin":
+        elif candidate == "O'Tooley":
             candidate_4.append(candidate)
 
     candidate_1_percent = (len(candidate_1)/len(voter_id))*100
@@ -50,7 +50,7 @@ with open(poll_data,newline="") as csvfile:
     candidate_3_percent = (len(candidate_3)/len(voter_id))*100
     candidate_4_percent = (len(candidate_4)/len(voter_id))*100
 
-    Winner={"Vestal":len(candidate_1),"Torres":len(candidate_2),"Seth":len(candidate_3),"Cordin":len(candidate_4)}
+    Winner={"Khan":len(candidate_1),"Li":len(candidate_2),"Correy":len(candidate_3),"O'Tooley":len(candidate_4)}
 
 
 
@@ -58,9 +58,11 @@ with open(poll_data,newline="") as csvfile:
     print("---------------------------------")
     print("Total Votes: ", len(voter_id))
     print("---------------------------------")
-    print("Vestal: ", candidate_1_percent,"% ","(", len(candidate_1),")")
-    print("Torres: ",candidate_2_percent,"% ","(", len(candidate_2),")")
-    print("Seth: ",candidate_3_percent,"% ","(", len(candidate_3),")")
-    print("Cordin: ",candidate_4_percent,"% ","(", len(candidate_4),")")
+    print("Khan: ", candidate_1_percent,"% ","(", len(candidate_1),")")
+    print("Li: ",candidate_2_percent,"% ","(", len(candidate_2),")")
+    print("Correy: ",candidate_3_percent,"% ","(", len(candidate_3),")")
+    print("O'Tooley: ",candidate_4_percent,"% ","(", len(candidate_4),")")
     print("---------------------------------")
     print("Winner: ", max(Winner))
+
+    

@@ -2,7 +2,7 @@ import os
 import csv
 
 #user_file= input('Enter the file (name.csv)')
-Budget_data= os.path.join("raw_data","budget_data_1.csv")
+Budget_data= os.path.join("raw_data","budget_data_2.csv")
 
 with open(Budget_data,newline="") as csvfile:
     reader=csv.reader(csvfile,delimiter=",")
@@ -44,7 +44,7 @@ with open(Budget_data,newline="") as csvfile:
     print("Greatest Increase in Revenue: ",max_month," $", greatest_increase)
     print("Greatest Decrease in Revenue: ",min_month," $", greatest_decrease)
 
-    text_path = os.path.join('.','budget_data_1.txt')
+    text_path = os.path.join('.','budget_data_2.txt')
 with open(text_path, "w") as text_file:
    text_file.write("Financial Analysis")
    text_file.write("---------------------------------")
