@@ -43,7 +43,7 @@ def precipitation():
     """Return a list of all the percp data"""
     # Query all Percipitation data from the previous year
     percp_data=session.query(Measurement.date, Measurement.prcp).\
-                        filter(Measurement.date > '2017-08-06').all()
+                        filter(Measurement.date > '2016-08-23').all()
     # Convert list of tuples into normal list
     percp_list = list(np.ravel(percp_data))
 
@@ -67,7 +67,7 @@ def tobs():
     """Return a list of all the Temperature data"""
     # Query all Temperature data from the previous year
     tobs_data=session.query(Measurement.date, Measurement.tobs).\
-                        filter(Measurement.date > '2017-08-06').all()
+                        filter(Measurement.date > '2016-08-23').all()
     # Convert list of tuples into normal list
     tobs_list = list(np.ravel(tobs_data))
 
